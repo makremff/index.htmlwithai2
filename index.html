@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Wheel Mini App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <div class="wheel-loader"></div>
+                <div class="wheel-center"></div>
+            </div>
+            <h1 class="loader-title">3D Wheel Game</h1>
+            <div class="loader-bar-container">
+                <div class="loader-bar"></div>
+            </div>
+            <p class="loader-text" id="loaderText">Loading...</p>
+        </div>
+    </div>
+
+    <div class="app-container">
+        <div class="header">
+            <button id="langBtn" class="lang-btn">
+                <span class="lang-icon">🌐</span>
+                <span id="langText">EN</span>
+            </button>
+            <div class="balance-display">
+                <span class="balance-icon">💰</span>
+                <span id="balanceText">RF</span>
+                <span id="balanceValue" class="balance-value">1,250</span>
+            </div>
+        </div>
+
+        <div class="wheel-container">
+            <canvas id="wheelCanvas"></canvas>
+            <button id="spinBtn" class="spin-btn">
+                <span id="spinText">SPIN</span>
+            </button>
+        </div>
+
+        <div class="controls-grid">
+            <button class="control-btn wallet-btn" id="walletBtn">
+                <span class="btn-icon">👛</span>
+                <span id="walletText">Connect Wallet</span>
+            </button>
+
+            <button class="control-btn referral-btn" id="referralBtn">
+                <span class="btn-icon">👥</span>
+                <span id="referralText">Referral</span>
+            </button>
+
+            <button class="control-btn leaderboard-btn" id="leaderboardBtn">
+                <span class="btn-icon">🏆</span>
+                <span id="leaderboardText">Leaderboard</span>
+            </button>
+
+            <button class="control-btn game-btn" id="gameBtn">
+                <span class="btn-icon">🎮</span>
+                <span id="gameText">Wheel Game</span>
+            </button>
+
+            <button class="control-btn ads-btn" id="adsBtn">
+                <span class="btn-icon">📺</span>
+                <span id="adsText">Watch Ads</span>
+            </button>
+        </div>
+
+        <div class="status-indicator" id="statusIndicator">
+            <div class="spinner"></div>
+            <span id="statusText">Ready</span>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
